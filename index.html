@@ -4,11 +4,44 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StadiumSync | Command Center</title>
-    <meta name="description" content="A Smart Stadium Command Center Dashboard designed with real-time crowd metrics and AI prediction alerts." />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#06060b" />
+
+    <!-- SEO -->
+    <title>StadiumSync | Smart Stadium Command Center</title>
+    <meta name="description" content="StadiumSync is an AI-powered Smart Stadium Command Center Dashboard featuring real-time crowd analytics, interactive heatmaps, and predictive incident management for large-scale sporting venues." />
+    <meta name="keywords" content="smart stadium, crowd management, IoT dashboard, real-time analytics, AI predictions" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="StadiumSync | Smart Stadium Command Center" />
+    <meta property="og:description" content="AI-powered crowd intelligence dashboard for large-scale sporting venues." />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts (Google Service #1) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Analytics (Google Service #2) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Accessibility: Skip to main content link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <noscript>
+      <div style="padding:2rem;text-align:center;font-family:sans-serif;background:#1a1a2e;color:#f0f0f5;">
+        <h1>StadiumSync requires JavaScript</h1>
+        <p>Please enable JavaScript in your browser to use the Command Center dashboard.</p>
+      </div>
+    </noscript>
+
+    <div id="root" role="application" aria-label="StadiumSync Command Center"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

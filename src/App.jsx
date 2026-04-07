@@ -822,7 +822,7 @@ export default function App() {
   return (
     <div className={`app-shell ${!settings.darkMode ? 'theme-light' : ''}`}>
       {/* ---------- SIDEBAR ---------- */}
-      <aside className="sidebar">
+      <aside className="sidebar" role="navigation" aria-label="Main navigation">
         <div className="sidebar__brand">
           <div className="sidebar__brand-icon">
             <Zap size={20} />
@@ -876,7 +876,7 @@ export default function App() {
       </aside>
 
       {/* ---------- MAIN ---------- */}
-      <main className="main">
+      <main className="main" id="main-content" role="main" aria-label="Dashboard content">
         <div className="topbar">
           <div className="topbar__left">
             <h2>{currentPage.title}</h2>
@@ -922,7 +922,7 @@ export default function App() {
       </main>
 
       {/* ---------- TOAST NOTIFICATIONS ---------- */}
-      <div className="toast-container">
+      <div className="toast-container" aria-live="polite" aria-atomic="false" role="status">
         {toasts.map((t) => (
           <Toast key={t.id} message={t.message} type={t.type} onClose={() => dismissToast(t.id)} />
         ))}
