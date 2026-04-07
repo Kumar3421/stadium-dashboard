@@ -2,7 +2,7 @@
 
 > **A real-time, AI-powered crowd intelligence dashboard designed to revolutionize the live event experience at large-scale sporting venues.**
 
-![Dashboard Preview](https://img.shields.io/badge/Status-Live-00e68a?style=for-the-badge&logo=vercel) ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react) ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite)
+![Dashboard Preview](https://img.shields.io/badge/Google_Cloud-Deployed-4285F4?style=for-the-badge&logo=google-cloud) ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react) ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite)
 
 ---
 
@@ -59,6 +59,7 @@ Our approach centers on a **Digital Twin** concept: providing operators with a l
 - **Reduced Motion:** Fully integrated `@media (prefers-reduced-motion: reduce)` to disable pulse animations and toast slide-ins for sensitive users.
 
 ### 6. Google Services Integration
+- **Google Cloud Run:** Fully containerized via Docker and deployed to Google Cloud Run utilizing a high-performance NGINX container.
 - **Google Fonts:** Utilizing `Space Grotesk` and `Inter` via preconnected Google Fonts CDN for highly legible typography.
 - **Google Analytics:** `gtag.js` integrated into `index.html` to track operator dashboard engagement and view-switching behavior.
 
@@ -111,9 +112,26 @@ stadium-dashboard/
 │   └── main.jsx              # React entry point
 ├── index.html                # HTML shell with Google Analytics & ARIA
 ├── package.json              # Vitest + React 19 configs
-├── vercel.json               # Vercel deployment config
-└── netlify.toml              # Netlify deployment config
+├── Dockerfile                # Multi-stage Docker config
+└── nginx.conf                # Cloud Run SPA Server Config
 ```
+
+---
+
+## ☁️ Google Cloud Run Deployment
+
+1. Ensure you have the `gcloud` CLI installed and authenticated.
+2. Run the deployment from the project root:
+
+```bash
+# Build and deploy directly to Cloud Run
+gcloud run deploy stadium-dashboard \
+  --source . \
+  --platform managed \
+  --allow-unauthenticated \
+  --port 8080
+```
+Outputs a permanent Google Cloud Run `.run.app` URL!
 
 ---
 
