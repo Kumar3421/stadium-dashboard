@@ -2,7 +2,7 @@
 
 > **A real-time, AI-powered crowd intelligence dashboard designed to revolutionize the live event experience at large-scale sporting venues.**
 
-![Dashboard Preview](https://img.shields.io/badge/Status-Live-00e68a?style=for-the-badge&logo=vercel) ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react) ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite)
+![Dashboard Preview](https://img.shields.io/badge/Status-Live-00e68a?style=for-the-badge&logo=googlecloud) ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react) ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite)
 
 ---
 
@@ -68,7 +68,7 @@ Our approach centers on a **Digital Twin** concept: providing operators with a l
 ## 🚀 Quick Start
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) v18+ installed
+- [Node.js](https://nodejs.org/) v20+ installed
 
 ### Install & Run
 
@@ -112,23 +112,19 @@ stadium-dashboard/
 │   └── main.jsx              # React entry point
 ├── index.html                # HTML shell with Google Analytics & ARIA
 ├── package.json              # Vitest + React 19 configs
-├── vercel.json               # Vercel deployment config
-└── netlify.toml              # Netlify deployment config
+└── Dockerfile                # Cloud Run deployment configuration
 ```
 
 ---
 
 ## 🌐 Deployment
 
-### Vercel (Recommended)
-1. Push this repo to GitHub
-2. Import the project at [vercel.com/new](https://vercel.com/new)
-3. Vercel auto-detects Vite — click **Deploy**
+### Google Cloud Run (Active)
+This project is fully containerized and serves as a production-ready Cloud Run service:
 
-### Netlify
-1. Push this repo to GitHub
-2. Import at [app.netlify.com](https://app.netlify.com)
-3. Netlify reads `netlify.toml` automatically — click **Deploy**
+1. **Live URL:** [https://stadium-dashboard-442427841417.us-central1.run.app](https://stadium-dashboard-442427841417.us-central1.run.app)
+2. **Infrastructure:** Deployed using **Node 20** and **NGINX** for optimized single-page application delivery.
+3. **Region:** `us-central1`
 
 ---
 
